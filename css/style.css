@@ -1,0 +1,36 @@
+body {
+  text-align: center;
+}
+
+table {
+  margin: 20px auto;
+}
+
+table.board {
+  border-collapse: collapse;
+  font-size: 50px;
+}
+
+.board td {
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  border: 5px solid black;
+  cursor: pointer;
+}
+
+.board tr td:first-child {
+  border-left: none;
+}
+
+.board tr td:last-child {
+  border-right: none;
+}
+
+.board tr:first-child td {
+  border-top: none;
+}
+
+.board tr:last-child td {
+  border-bottom: none;
+}
