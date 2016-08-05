@@ -14,6 +14,7 @@ $(document).ready(function () {
           currentPlayer = 'x';
         }
     }
+    
     // if () {
     //   alert("Congratulations, you've won!")
     // } else {
