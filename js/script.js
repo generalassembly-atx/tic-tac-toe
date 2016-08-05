@@ -1,19 +1,28 @@
 $(document).ready(function () {
+  var currentPlayer = 'x';
+
   $('.squares').on('click', function () {
-    var marker = ('x' || 'o')
-    if ($('.squares').text() === marker) {
+
+    if ($(this).text() === 'x' || $(this).text() === 'o') {
       alert('This square is already taken! Choose another.')
     } else {
-        if ($(this) === $('.playerOne') {
-          $('.squares').text('x')
+        if (currentPlayer === 'x') {
+          $(this).text('x')
+          currentPlayer = 'o';
         } else {
-        } $('.squares').text('o')
+          $(this).text('o')
+          currentPlayer = 'x';
+        }
     }
-  })
+    // if () {
+    //   alert("Congratulations, you've won!")
+    // } else {
+    //   console.log('no winner')
+    // }
+  });
 
 });
 
-//need to call it still
 function moveMaker() {
   if ($('#currentPlayer').text() === '1') {
     $('#currentPlayer').text('2')
