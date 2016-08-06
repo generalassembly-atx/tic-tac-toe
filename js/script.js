@@ -14,12 +14,11 @@ $(document).ready(function () {
           currentPlayer = 'x';
         }
     }
-    
-    // if () {
-    //   alert("Congratulations, you've won!")
-    // } else {
-    //   console.log('no winner')
-    // }
+    var winSearch = [[1,4,7],[2,5,8],[3,6,9],[1,2,3],[4,5,6],[7,8,9],[1,5,9],[3,5,7]];
+    var match = winSearch.indexOf(a);
+    if ((match === 0) ||(match === 1) ||(match === 2) ||(match === 3) ||(match === 4) ||(match === 5) ||(match === 6) ||(match === 7) ||(match === 8)) {
+      return a
+    }
   });
 
 });
