@@ -67,9 +67,11 @@ $(document).ready(function () {
   });
 
 });
-
 function addOne() {
-  ($('#playerOne').text() + 1);
+  var a = $('#playerOne').text();
+  var b = 1;
+  var score = parseInt(a + b);
+  //change text of playerOne 
 }
 
 function clearBoard() {
