@@ -158,5 +158,6 @@ function catsGame() {
     }
     else {
       alert("It's a cat's game!");
+      clearBoard();
     }
 }
