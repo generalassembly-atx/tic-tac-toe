@@ -65,49 +65,49 @@ $(document).ready(function () {
         }
         if (($('#one').text() === '') && ($('#four').text() === 'o') && ($('#seven').text() === 'o')) {
           alert("Player Two is the winner!");
-          addOne();
+          addTwo();
           moveMaker();
           clearBoard();
         }
         if (($('#two').text() === 'o') && ($('#five').text() === 'o') && ($('#eight').text() === 'o')) {
           alert("Player Two is the winner!");
-          addOne();
+          addTwo();
           moveMaker();
           clearBoard();
         }
         if (($('#three').text() === 'o') && ($('#six').text() === 'o') && ($('#nine').text() === 'x')) {
           alert("Player Two is the winner!");
-          addOne();
+          addTwo();
           moveMaker();
           clearBoard();
         }
         if (($('#one').text() === 'o') && ($('#two').text() === 'o') && ($('#three').text() === 'o')) {
           alert("Player Two is the winner!");
-          addOne();
+          addTwo();
           moveMaker();
           clearBoard();
         }
         if (($('#four').text() === 'o') && ($('#five').text() === 'o') && ($('#six').text() === 'o')) {
           alert("Player Two is the winner!");
-          addOne();
+          addTwo();
           moveMaker();
           clearBoard();
         }
         if (($('#seven').text() === 'o') && ($('#eight').text() === 'o') && ($('#nine').text() === 'o')) {
           alert("Player Two is the winner!");
-          addOne();
+          addTwo();
           moveMaker();
           clearBoard();
         }
         if (($('#one').text() === 'o') && ($('#five').text() === 'o') && ($('#nine').text() === 'o')) {
           alert("Player Two is the winner!");
-          addOne();
+          addTwo();
           moveMaker();
           clearBoard();
         }
         if (($('#three').text() === 'o') && ($('#five').text() === 'o') && ($('#seven').text() === 'o')) {
           alert("Player Two is the winner!");
-          addOne();
+          addTwo();
           moveMaker();
           clearBoard();
         }
@@ -115,10 +115,17 @@ $(document).ready(function () {
 
 });
 function addOne() {
-  var a = $('#playerOne').text();
+  var currentOneScore = parseInt($('.playerOne').text());
   var b = 1;
-  var score = parseInt(a + b);
-  //change text of playerOne
+  oneScore = (currentOneScore) + b;
+  $('.playerOne').text(oneScore);
+}
+
+function addTwo() {
+  var currentTwoScore = parseInt($('.playerTwo').text());
+  var b = 1;
+  twoScore = (currentTwoScore) + b;
+  $('.playerTwo').text(twoScore);
 }
 
 function clearBoard() {
