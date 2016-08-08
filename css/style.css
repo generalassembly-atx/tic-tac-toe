@@ -1,5 +1,8 @@
 body {
   text-align: center;
+  font-family: 'Amatic SC', cursive;
+  font-size: 30px;
+  background-color: #6495ED;
 }
 
 table {
