@@ -14,103 +14,104 @@ $(document).ready(function () {
           currentPlayer = 'x';
         }
     }
-        if (($('#one').text() === 'x') && ($('#four').text() === 'x') && ($('#seven').text() === 'x')) {
-          alert("Player One is the winner!");
-          addOne();
-          moveMaker();
-          clearBoard();
 
-        }
-        if (($('#two').text() === 'x') && ($('#five').text() === 'x') && ($('#eight').text() === 'x')) {
-          alert("Player One is the winner!");
-          addOne();
-          moveMaker();
-          clearBoard();
-        }
-        if (($('#three').text() === 'x') && ($('#six').text() === 'x') && ($('#nine').text() === 'x')) {
-          alert("Player One is the winner!");
-          addOne();
-          moveMaker();
-          clearBoard();
-        }
-        if (($('#one').text() === 'x') && ($('#two').text() === 'x') && ($('#three').text() === 'x')) {
-          alert("Player One is the winner!");
-          addOne();
-          moveMaker();
-          clearBoard();
-        }
-        if (($('#four').text() === 'x') && ($('#five').text() === 'x') && ($('#six').text() === 'x')) {
-          alert("Player One is the winner!");
-          addOne();
-          moveMaker();
-          clearBoard();
-        }
-        if (($('#seven').text() === 'x') && ($('#eight').text() === 'x') && ($('#nine').text() === 'x')) {
-          alert("Player One is the winner!");
-          addOne();
-          moveMaker();
-          clearBoard();
-        }
-        if (($('#one').text() === 'x') && ($('#five').text() === 'x') && ($('#nine').text() === 'x')) {
-          alert("Player One is the winner!");
-          addOne();
-          moveMaker();
-          clearBoard();
-        }
-        if (($('#three').text() === 'x') && ($('#five').text() === 'x') && ($('#seven').text() === 'x')) {
-          alert("Player One is the winner!");
-          addOne();
-          moveMaker();
-          clearBoard();
-        }
-        if (($('#one').text() === '') && ($('#four').text() === 'o') && ($('#seven').text() === 'o')) {
-          alert("Player Two is the winner!");
-          addTwo();
-          moveMaker();
-          clearBoard();
-        }
-        if (($('#two').text() === 'o') && ($('#five').text() === 'o') && ($('#eight').text() === 'o')) {
-          alert("Player Two is the winner!");
-          addTwo();
-          moveMaker();
-          clearBoard();
-        }
-        if (($('#three').text() === 'o') && ($('#six').text() === 'o') && ($('#nine').text() === 'x')) {
-          alert("Player Two is the winner!");
-          addTwo();
-          moveMaker();
-          clearBoard();
-        }
-        if (($('#one').text() === 'o') && ($('#two').text() === 'o') && ($('#three').text() === 'o')) {
-          alert("Player Two is the winner!");
-          addTwo();
-          moveMaker();
-          clearBoard();
-        }
-        if (($('#four').text() === 'o') && ($('#five').text() === 'o') && ($('#six').text() === 'o')) {
-          alert("Player Two is the winner!");
-          addTwo();
-          moveMaker();
-          clearBoard();
-        }
-        if (($('#seven').text() === 'o') && ($('#eight').text() === 'o') && ($('#nine').text() === 'o')) {
-          alert("Player Two is the winner!");
-          addTwo();
-          moveMaker();
-          clearBoard();
-        }
-        if (($('#one').text() === 'o') && ($('#five').text() === 'o') && ($('#nine').text() === 'o')) {
-          alert("Player Two is the winner!");
-          addTwo();
-          moveMaker();
-          clearBoard();
-        }
-        if (($('#three').text() === 'o') && ($('#five').text() === 'o') && ($('#seven').text() === 'o')) {
-          alert("Player Two is the winner!");
-          addTwo();
-          moveMaker();
-          clearBoard();
-        }
+    if (($('#one').text() === 'x') && ($('#four').text() === 'x') &&    ($('#seven').text() === 'x')) {
+      alert("Player One is the winner!");
+      addOne();
+      moveMaker();
+      clearBoard();
+
+    }
+    if (($('#two').text() === 'x') && ($('#five').text() === 'x') && ($('#eight').text() === 'x')) {
+      alert("Player One is the winner!");
+      addOne();
+      moveMaker();
+      clearBoard();
+    }
+    if (($('#three').text() === 'x') && ($('#six').text() === 'x') && ($('#nine').text() === 'x')) {
+      alert("Player One is the winner!");
+      addOne();
+      moveMaker();
+      clearBoard();
+    }
+    if (($('#one').text() === 'x') && ($('#two').text() === 'x') && ($('#three').text() === 'x')) {
+      alert("Player One is the winner!");
+      addOne();
+      moveMaker();
+      clearBoard();
+    }
+    if (($('#four').text() === 'x') && ($('#five').text() === 'x') && ($('#six').text() === 'x')) {
+      alert("Player One is the winner!");
+      addOne();
+      moveMaker();
+      clearBoard();
+    }
+    if (($('#seven').text() === 'x') && ($('#eight').text() === 'x') && ($('#nine').text() === 'x')) {
+      alert("Player One is the winner!");
+      addOne();
+      moveMaker();
+      clearBoard();
+    }
+    if (($('#one').text() === 'x') && ($('#five').text() === 'x') && ($('#nine').text() === 'x')) {
+      alert("Player One is the winner!");
+      addOne();
+      moveMaker();
+      clearBoard();
+    }
+    if (($('#three').text() === 'x') && ($('#five').text() === 'x') && ($('#seven').text() === 'x')) {
+      alert("Player One is the winner!");
+      addOne();
+      moveMaker();
+      clearBoard();
+    }
+    if (($('#one').text() === '') && ($('#four').text() === 'o') && ($('#seven').text() === 'o')) {
+      alert("Player Two is the winner!");
+      addTwo();
+      moveMaker();
+      clearBoard();
+    }
+    if (($('#two').text() === 'o') && ($('#five').text() === 'o') && ($('#eight').text() === 'o')) {
+      alert("Player Two is the winner!");
+      addTwo();
+      moveMaker();
+      clearBoard();
+    }
+    if (($('#three').text() === 'o') && ($('#six').text() === 'o') && ($('#nine').text() === 'x')) {
+      alert("Player Two is the winner!");
+      addTwo();
+      moveMaker();
+      clearBoard();
+    }
+    if (($('#one').text() === 'o') && ($('#two').text() === 'o') && ($('#three').text() === 'o')) {
+      alert("Player Two is the winner!");
+      addTwo();
+      moveMaker();
+      clearBoard();
+    }
+    if (($('#four').text() === 'o') && ($('#five').text() === 'o') && ($('#six').text() === 'o')) {
+      alert("Player Two is the winner!");
+      addTwo();
+      moveMaker();
+      clearBoard();
+    }
+    if (($('#seven').text() === 'o') && ($('#eight').text() === 'o') && ($('#nine').text() === 'o')) {
+      alert("Player Two is the winner!");
+      addTwo();
+      moveMaker();
+      clearBoard();
+    }
+    if (($('#one').text() === 'o') && ($('#five').text() === 'o') && ($('#nine').text() === 'o')) {
+      alert("Player Two is the winner!");
+      addTwo();
+      moveMaker();
+      clearBoard();
+    }
+    if (($('#three').text() === 'o') && ($('#five').text() === 'o') && ($('#seven').text() === 'o')) {
+      alert("Player Two is the winner!");
+      addTwo();
+      moveMaker();
+      clearBoard();
+    }
   });
 
 });
@@ -138,4 +139,21 @@ function moveMaker() {
   } else {
     $('#currentPlayer').text('1')
   }
+
+function catsGame() {
+  if (alert("Player One is the winner!")) {
+    break;
+  } else if (emptySquare()) {
+    break;
+  } else {
+    alert("It's a cat's game!");
+  }
+}
+
+function emptySquare() {
+  var checkSquares = $('.squares').text();
+  if (checkSquares === (''));
+  break;
+}
+
 }
