@@ -3,49 +3,60 @@
   <head>
     <meta charset="utf-8">
     <title>Tic Tac Toe</title>
+
     <link rel="stylesheet" href="css/style.css" media="screen" charset="utf-8">
+
+    <link href='https://fonts.googleapis.com/css?family=Amatic+SC' rel='stylesheet' type='text/css'>
+
   </head>
   <body>
-    <h1>Tic Tac Toe</h1>
-    <h2>Current Player: <span>1</span></h2>
 
-    <table class="score">
-      <thead>
-        <tr>
-          <th>Player 1 Score</th>
-          <th>Player 2 Score</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>0</td>
-          <td>0</td>
-        </tr>
-      </tbody>
-    </table>
+    <div class="gameboard">
 
-    <table class="board">
-      <tbody>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-      </tbody>
-    </table>
+        <h1>Tic Tac Toe</h1>
+        <h2>Current Player: <span id="currentPlayer">1</span></h2>
+
+        <table class="score">
+          <thead>
+            <tr>
+              <th>Player 1 Score</th>
+              <th>Player 2 Score</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="playerOne">0</td>
+              <td class="playerTwo">0</td>
+            </tr>
+          </tbody>
+
+      </table>
+
+      <table class="board">
+        <tbody>
+          <tr>
+            <td class="squares" id="one"></td>
+            <td class="squares" id="two"></td>
+            <td class="squares"id="three"></td>
+          </tr>
+          <tr>
+            <td class="squares"id="four"></td>
+            <td class="squares"id="five"></td>
+            <td class="squares"id="six"></td>
+          </tr>
+          <tr>
+            <td class="squares"id="seven"></td>
+            <td class="squares"id="eight"></td>
+            <td class="squares"id="nine"></td>
+          </tr>
+        </tbody>
+      </table>
+
+    </div>
+
 
     <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
-    
+
     <script src="js/script.js" charset="utf-8"></script>
   </body>
 </html>
