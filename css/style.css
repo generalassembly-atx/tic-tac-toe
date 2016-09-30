@@ -1,5 +1,6 @@
 body {
   text-align: center;
+  font-family: sans-serif;
 }
 
 table {
@@ -33,4 +34,16 @@ table.board {
 
 .board tr:last-child td {
   border-bottom: none;
+}
+a.replay{
+  display: inline-block;
+  text-decoration: none;
+  font-weight: bold;
+  background-color: #000099;
+  color: #ffffff;
+  padding: 10px 30px;
+}
+.winner{
+  text-align: center;
+  color: #ff0000;
 }
