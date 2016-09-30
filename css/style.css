@@ -17,6 +17,7 @@ table.board {
   text-align: center;
   border: 5px solid black;
   cursor: pointer;
+  box-sizing:border-box;
 }
 
 .board tr td:first-child {
@@ -33,4 +34,11 @@ table.board {
 
 .board tr:last-child td {
   border-bottom: none;
+}
+
+
+
+p {
+  font-size:42px;
+  margin:0;
 }
