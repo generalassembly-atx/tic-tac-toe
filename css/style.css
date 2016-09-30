@@ -19,7 +19,7 @@ table.board {
   width: 100px;
   height: 100px;
   text-align: center;
-  border: 5px solid black;
+  border: 5px solid white;
   cursor: pointer;
 }
 
