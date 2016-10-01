@@ -15,7 +15,7 @@ table.board {
   width: 100px;
   height: 100px;
   text-align: center;
-  border: 5px solid black;
+  border: 5px solid white;
   cursor: pointer;
 }
 
@@ -33,4 +33,18 @@ table.board {
 
 .board tr:last-child td {
   border-bottom: none;
+}
+
+.x {
+  background-image: url('http://www.dreamincode.net/forums/uploads/monthly_10_2010/post-0-1288415108966.png');
+  background-size: 70px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.o {
+  background-image: url('http://www.dreamincode.net/forums/uploads/monthly_10_2010/post-0-12884151170642.png');
+  background-position: center;
+  background-size: 70px;
+  background-repeat: no-repeat;
 }
