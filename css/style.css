@@ -12,8 +12,8 @@ table.board {
 }
 
 .board td {
-  width: 120px;
-  height: 120px;
+  width: 115px;
+  height: 115px;
   text-align: center;
   border: 5px solid white;
   cursor: pointer;
@@ -36,14 +36,14 @@ table.board {
 }
 
 .x {
-  background-image: url('http://www.dreamincode.net/forums/uploads/monthly_10_2010/post-0-1288415108966.png');
+  background-image: url('../images/x.png');
   background-size: 70px;
   background-repeat: no-repeat;
   background-position: center;
 }
 
 .o {
-  background-image: url('http://www.dreamincode.net/forums/uploads/monthly_10_2010/post-0-12884151170642.png');
+  background-image: url('../images/o.png');
   background-position: center;
   background-size: 75px;
   background-repeat: no-repeat;
