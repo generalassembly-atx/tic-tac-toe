@@ -30,13 +30,13 @@ $(document).ready(function() {
     var $p2 = $('#p2score');
     $p2.html(parseInt($p2.html()) + 1);
     resetBoard();
-    $('.winner').text('Player 2 Wins!').slideDown();
+    $('.winner').removeClass('text-danger').addClass('text-primary').text('Player 2 Wins!').slideDown();
   }
   function xWin() {
     var $p1 = $('#p1score');
     $p1.html(parseInt($p1.html()) + 1);
     resetBoard();
-    $('.winner').text('Player 1 Wins!').slideDown();
+    $('.winner').addClass('text-danger').text('Player 1 Wins!').slideDown();
   }
   function resetBoard() {
     $('.board').find('td').removeClass('x o');

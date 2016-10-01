@@ -60,6 +60,8 @@ table.board {
 .score td {
   padding-top: 5px;
   padding-bottom: 10px;
+  font-size: 30px;
+  font-weight: bold;
 }
 
 .score span {
@@ -72,7 +74,7 @@ table.board {
 }
 
 .title {
-  font-size: 60px;
-  padding-bottom: 10px;
+  font-size: 50px;
+  padding-bottom: 5px;
   padding-top: 5px;
 }
