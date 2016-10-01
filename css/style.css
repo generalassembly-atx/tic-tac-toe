@@ -12,8 +12,8 @@ table.board {
 }
 
 .board td {
-  width: 100px;
-  height: 100px;
+  width: 120px;
+  height: 120px;
   text-align: center;
   border: 5px solid white;
   cursor: pointer;
@@ -37,7 +37,7 @@ table.board {
 
 .x {
   background-image: url('http://www.dreamincode.net/forums/uploads/monthly_10_2010/post-0-1288415108966.png');
-  background-size: 60px;
+  background-size: 70px;
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -45,21 +45,34 @@ table.board {
 .o {
   background-image: url('http://www.dreamincode.net/forums/uploads/monthly_10_2010/post-0-12884151170642.png');
   background-position: center;
-  background-size: 65px;
+  background-size: 75px;
   background-repeat: no-repeat;
 }
 
-.score th {
-  padding-left: 20px;
-  padding-top: 10px;
+.score {
+  margin-bottom: 40px;
 }
 
-#p1, #p2 {
-  padding-bottom: 30px;
-  padding-top: 5px
+.score th {
+  padding: 10px;
+}
+
+.score td {
+  padding-top: 5px;
+  padding-bottom: 10px;
+}
+
+.score span {
+  padding: 0 2px 0 2px;
 }
 
 .winner {
   display: none;
   padding-bottom: 20px;
+}
+
+.title {
+  font-size: 60px;
+  padding-bottom: 10px;
+  padding-top: 5px;
 }
