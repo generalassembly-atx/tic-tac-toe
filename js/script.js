@@ -140,8 +140,10 @@ $(document).ready(function() {
       // content of test string gives the answer. is there a winner? is there a loser?
       if (test == 'xxx') {
         xWins(line);
+        return;
       } else if (test == "ooo") {
         oWins(line);
+        return;
       }
     }
 
@@ -160,29 +162,27 @@ $(document).ready(function() {
     $('.win-log').append('<h1 class="winner">Player 1 wins!</h1>');
     playerOneScore += 1;
     $('#playerOneScore').text(playerOneScore);
+    scorePop('p1');
 
   }
   function oWins() {
-  hideBoard();
-  $('.win-log').append('<h1 class="winner">Player 2 wins!</h1>');
-  playerTwoScore += 1;
-  $('#playerTwoScore').text(playerTwoScore);
-
+    hideBoard();
+    $('.win-log').append('<h1 class="winner">Player 2 wins!</h1>');
+    playerTwoScore += 1;
+    $('#playerTwoScore').text(playerTwoScore);
+    scorePop('p2');
   }
 
   function catWins() {
-    // $('.board').fadeOut(500);
-    $('body').append('<h1 class="winner">Cat wins!</h1>');
+    $('.win-log').append('<h1 class="winner">Cat wins!</h1>');
   }
+
+
   function hideBoard() {
     console.log('hiding board');
     board = $('.board');
     board.hide();
-    // board.css ('position', 'relative');
-  //   board.animate({'opacity': '0',
-  //                        'right': '300px',
-  //
-  // }, 900);
+
 
   }
 
@@ -194,13 +194,23 @@ $(document).ready(function() {
     for (var i = 0; i < squaresList.length; i++) {
       $(squaresList[i]).html('');
       $(squaresList[i]).data('character', 'none');
+      console.log($(squaresList[i]).data())
     }
+    turnsTaken = 0;
 
   }
 
-  // function initialize(); {
-  //
-  // }
+  function scorePop(p) {
+    if (p==="p1") {
+      t = $('#playerOneScore');
+    } else if (p==="p2") {
+      t = $("#playerTwoScore");
+    }
+
+    t.animate({'font-size': '36px'}, 200);
+    t.animate({'font-size': '24px'},200);
+
+  }
 
 
 }); // DOCUMENT READY
