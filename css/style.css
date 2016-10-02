@@ -66,11 +66,6 @@ table.score thead * {
   padding: 0 40px;
 }
 
-/*table.score {
-  position:fixed;
-  font-size:24px;
-  top:15%;
+button {
+  border-radius:30px !important;
 }
-table.score thead *{
-  padding: 0 40px;
-}*/

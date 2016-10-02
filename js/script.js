@@ -8,15 +8,9 @@ $(document).ready(function() {
   var turnsTaken = 0;
   var squaresList = $('.square');
 
-// setup event listeners on all the squares
-  for (var i = 0; i < squaresList.length; i++) {
-    $(squaresList[i]).on('click', squareClick)
-  }
-// setup test event listeners for winning functions
-  $('h1').on('click', xWins);
-
-// setup event handler for reset button (will this work since the button isn't appended until later?)
-  $('.reset').on('click', reset);
+  // Event Listeners
+  $(squaresList).on('click', squareClick)
+  $('button.reset').on('click', reset);
 
 
     // ********
@@ -63,9 +57,10 @@ $(document).ready(function() {
 
 // ****
 // The data structure is important because it contains the winning combinations
-// For example, It contains a list called row1. It contains another list called column3. column2. diag1.
-// These lists are containers, holding the individual cells
-// This is convenient because we can loop through the elements of these lists and test for a win each time.
+// For example, It contains a list called row1. It contains a list called row2. And so on...
+// These lists are containers, holding the individual cells themselves.
+// The individual cells contain the data of their state - X, O, or none.
+// These lists are  convenient because we can loop through the elements inside the lists and test for a win each time.
 // (1) look into row1, look at each cell, look at the value of each cell. is this a winning combo?
 // (2) look into row2, look at each cell, look at the value of each cell. is this a winning combo?
 // (3) look into row 3,
@@ -80,11 +75,10 @@ $(document).ready(function() {
 
     // A cell that already contains a value has been clicked
     // ** illegal move **
-
     if ($(this).html() != '') {
       alert('choose a better spot');
 
-    // places an X and tests for a Win
+    //if player is 1, place an X and test for a Win
     } else if (player === 1) {
       $(this).html('<p>X</p>').hide().fadeIn(600);
       $(this).data('character', 'x');
@@ -95,7 +89,7 @@ $(document).ready(function() {
     }
 
 
-    // places an O and tests for a Win
+    // if player is 2, place a O and test for a Win
     else if (player === 2) {
       $(this).html('<p>O</p>').hide().fadeIn(600);;
       $(this).data('character', 'o'); // "oh" not "zero"
@@ -107,85 +101,72 @@ $(document).ready(function() {
 
   };
 
-
-
   // **********
   // tests for a winner
   // this function is run every time a click is placed
   // *************************************************
 
   function testWin() {
-
     // keeping a tally on how many turns have been taken (when == 9, game over)
     turnsTaken += 1;
-    //
-
     // looking into the data structure
-    //
-    // ** this FOR-IN LOOP looks strange but it works.
-    // ** lines is a container that holds all the possible 3-element lines on the board
-    // ** for example, row 1 is a line. column 1 is a line. diagonal 2 is a line.
-    // **
-    for (var lineIndex in lines) {
-      var line = lines[lineIndex];
-
+    for (var i = 0; i < lines.length; i++) {
+      var line = lines[i];
       var test = "";
       // Look into each line that we retrieve from lines.
-      // Get it's data-character (none, x, o)
-      // Append it to test string
-      for (var i=0; i<3 ;i++){
-        test+=$(line[i]).data('character');
+      for (var j=0; j<3 ;j++){
+        // Get it's data-characters (none, x, o)
+        var character = $(line[j]).data('character')
+        // Append character to test string
+        test+=character;
       }
-
       // content of test string gives the answer. is there a winner? is there a loser?
       if (test == 'xxx') {
-        xWins(line);
+        xWins();
         return;
       } else if (test == "ooo") {
-        oWins(line);
+        oWins();
         return;
       }
     }
-
     // if all the spots have been clicked and there is still no 'xxx' or 'ooo', then there is a tie.
     if (turnsTaken===9) {
       catWins();
     }
-
-
-
-
   };
 
   function xWins() {
     hideBoard();
-    $('.win-log').append('<h1 class="winner">Player 1 wins!</h1>');
+    // $('.win-log').append('<h1 class="winner">Player 1 wins!</h1>');
     playerOneScore += 1;
     $('#playerOneScore').text(playerOneScore);
     scorePop('p1');
-
   }
   function oWins() {
     hideBoard();
-    $('.win-log').append('<h1 class="winner">Player 2 wins!</h1>');
+    // $('.win-log').append('<h1 class="winner">Player 2 wins!</h1>');
     playerTwoScore += 1;
     $('#playerTwoScore').text(playerTwoScore);
     scorePop('p2');
   }
-
   function catWins() {
+    hideBoard();
     $('.win-log').append('<h1 class="winner">Cat wins!</h1>');
   }
-
-
   function hideBoard() {
     console.log('hiding board');
     board = $('.board');
     board.hide();
-
-
   }
-
+  function scorePop(p) {
+    if (p==="p1") {
+      t = $('#playerOneScore');
+    } else if (p==="p2") {
+      t = $("#playerTwoScore");
+    }
+    t.animate({'font-size': '86px'}, 400);
+    t.animate({'font-size': '24px'},200);
+  }
   function reset() {
     console.log('resetting!');
     $('.win-log').empty();
@@ -197,20 +178,5 @@ $(document).ready(function() {
       console.log($(squaresList[i]).data())
     }
     turnsTaken = 0;
-
   }
-
-  function scorePop(p) {
-    if (p==="p1") {
-      t = $('#playerOneScore');
-    } else if (p==="p2") {
-      t = $("#playerTwoScore");
-    }
-
-    t.animate({'font-size': '36px'}, 200);
-    t.animate({'font-size': '24px'},200);
-
-  }
-
-
 }); // DOCUMENT READY
