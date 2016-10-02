@@ -50,7 +50,7 @@ table.board {
 }
 
 .score {
-  margin-bottom: 40px;
+  margin-bottom: 5%;
 }
 
 .score th {
@@ -70,11 +70,8 @@ table.board {
 
 .winner {
   display: none;
-  padding-bottom: 20px;
 }
 
 .title {
-  font-size: 50px;
-  padding-bottom: 5px;
-  padding-top: 5px;
+  font-size: 45px;
 }
