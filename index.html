@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>Tic Tac Toe</title>
     <link rel="stylesheet" href="css/style.css" media="screen" charset="utf-8">
+
   </head>
   <body>
     <h1>Tic Tac Toe</h1>
@@ -26,11 +27,15 @@
 
     <table class="board">
       <tbody>
+
+
         <tr id="row1">
+          <!-- The program relies on the data-character attribute. Data-character will be 'none', or 'x', or 'o'.  -->
           <td data-character="none" class="square"></td>
           <td data-character="none" class="square"></td>
           <td data-character="none" class="square"></td>
         </tr>
+
         <tr id="row2">
           <td data-character="none" class="square"></td>
           <td data-character="none" class="square"></td>
@@ -43,6 +48,8 @@
         </tr>
       </tbody>
     </table>
+
+    <button class="reset btn btn-lg btn-primary">Play again!</button>
 
     <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
 

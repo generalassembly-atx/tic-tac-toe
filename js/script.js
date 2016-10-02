@@ -3,19 +3,25 @@ $(document).ready(function() {
 
   // Global Variables
   var player = 1;
-
+  var turnsTaken = 0;
   var squaresList = $('.square');
-  // setup event listeners on all the squares
+
+// setup event listeners on all the squares
+
   for (var i = 0; i < squaresList.length; i++) {
     $(squaresList[i]).on('click', squareClick)
   }
+// setup test event listeners for winning functions
+  $('h1').on('click', xWins);
 
-  console.log(player);
+// setup event handler for reset button (will this work since the button isn't appended until later?)
+  $('.reset').on('click', reset);
 
-  // ********
-  // build rows,columns, diagonals
-  // into a data structure
-  // ********
+
+    // ********
+    // build rows,columns, diagonals
+    // into a data structure
+    // ********
 
   var row1 = $('#row1').find('td');
   var row2 = $('#row2').find('td');
@@ -43,7 +49,7 @@ $(document).ready(function() {
   diag2.push(row2[1]);
   diag2.push(row3[0]);
 
-  // all these rows/columns/diags in a container "lines"
+          // all these rows/columns/diags into a container "lines"
   var lines = [];
   lines.push(row1);
   lines.push(row2);
@@ -82,8 +88,17 @@ $(document).ready(function() {
   };
 
   function testWin() {
-    for (var line in lines) {
-      line = lines[line];
+    turnsTaken += 1;
+
+    for (var lineIndex in lines) {
+
+
+
+      var line = lines[lineIndex];
+
+
+
+
       var test = "";
       for (var i=0; i<3 ;i++){
         test+=$(line[i]).data('character');
@@ -92,23 +107,45 @@ $(document).ready(function() {
         xWins(line);
       } else if (test == "ooo") {
         oWins(line);
-      }
+      } 
     }
+    if (turnsTaken===9) {
+      catWins();
+    }
+
+
+
 
   };
 
   function xWins() {
-    $('.board').fadeOut(1000);
-    $('body').append('<h1 class="winner">Player 1 wins!</h1>').hide().fadeIn(1400);
-    $('body').append('<button class="btn btn-lg btn-primary">Play again!</button>');
+    $('.board').fadeOut(500);
+    $('body').append('<h1 class="winner">Player 1 wins!</h1>');
 
   }
   function oWins() {
   $('.board').fadeOut(1000);
-  $('body').append('<h1 class="winner">Player 2 wins!</h1>').hide().fadeIn(1400);
-  $('body').append('<button class="btn btn-lg btn-primary">Play again!</button>');
+  $('body').append('<h1 class="winner">Player 2 wins!</h1>');
 
   }
+
+  function catWins() {
+    $('.board').fadeOut(500);
+    $('body').append('<h1 class="winner">Cat wins!</h1>');
+  }
+
+  function reset() {
+    console.log('resetting!');
+    // $('.board').empty();
+    // $('.board').initialize();
+
+    // for every cell in the board, wipe its data and its html content
+
+  }
+
+  // function initialize(); {
+  //
+  // }
 
 
 }); // DOCUMENT READY
