@@ -7,45 +7,50 @@
   </head>
   <body>
     <h1>Tic Tac Toe</h1>
-    <h2>Current Player: <span>1</span></h2>
+    <h2 >Player <span id= "currentPlayer">1</span></h2>
 
     <table class="score">
       <thead>
         <tr>
           <th>Player 1 Score</th>
           <th>Player 2 Score</th>
+          <th>Player CAT Score</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td>0</td>
-          <td>0</td>
+          <td id="playerOneScore">0</td>
+          <td id="playerTwoScore">0</td>
+          <td id="playerCatScore">0</td>
         </tr>
       </tbody>
     </table>
+
 
     <table class="board">
-      <tbody>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
+      <tbody id="column">
+        <tr id="topRow" >
+          <td class="1" class="left" ></td>
+          <td class="2" class="mid"></td>
+          <td class="3" class="right"></td>
         </tr>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
+        <tr id="middleRow" >
+          <td class="4" class="left"></td>
+          <td class="5" class="mid" ></td>
+          <td class="6" class="right"></td>
         </tr>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
+        <tr id="bottomRow" class="empty">
+          <td class="7" class="left"></td>
+          <td class="8" class="mid"></td>
+          <td class="9" class="right" id="9"
+          ></td>
         </tr>
       </tbody>
     </table>
 
+
     <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
-    
+
     <script src="js/script.js" charset="utf-8"></script>
   </body>
 </html>
