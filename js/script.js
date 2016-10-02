@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  $('.board').on('mousedown', 'td', playerClicked);
+  $('.board').on('mousedown touchstart', 'td', playerClicked);
 });
 // Player Tracker:
 player = 0;
@@ -27,15 +27,15 @@ function playerClicked(e) {
 }
 
 function oWin() {
-  var $p2 = $('#p2score');
-  $p2.html(parseInt($p2.html()) + 1);
+  var p2 = $('#p2score');
+  p2.html(parseInt(p2.html()) + 1);
   setTimeout(resetBoard, 1000);
   $('.winner').removeClass('text-danger').addClass('text-primary').text('Player 2 Wins!');
   $('.winner').slideDown();
 }
 function xWin() {
-  var $p1 = $('#p1score');
-  $p1.html(parseInt($p1.html()) + 1);
+  var p1 = $('#p1score');
+  p1.html(parseInt(p1.html()) + 1);
   setTimeout(resetBoard, 1000);
   $('.winner').addClass('text-danger').text('Player 1 Wins!');
   $('.winner').slideDown();
