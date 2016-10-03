@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8">
@@ -7,7 +7,7 @@
   </head>
   <body>
     <h1>Tic Tac Toe</h1>
-    <h2>Current Player: <span>1</span></h2>
+    <h2>Current Player: <span id="currentPlayer">1</span></h2>
 
     <table class="score">
       <thead>
@@ -18,34 +18,34 @@
       </thead>
       <tbody>
         <tr>
-          <td>0</td>
-          <td>0</td>
+          <td id="player1Score">0</td>
+          <td id="player2Score">0</td>
         </tr>
       </tbody>
     </table>
 
     <table class="board">
       <tbody>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
+        <tr class="row1">
+          <td id="square1" class="column1"></td>
+          <td id="square2" class="column2"></td>
+          <td id="square3" class="column3"></td>
         </tr>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
+        <tr class="row2">
+          <td id="square4" class="column1"></td>
+          <td id="square5" class="column2"></td>
+          <td id="square6" class="column3"></td>
         </tr>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
+        <tr class="row3">
+          <td id="square7" class="column1"></td>
+          <td id="square8" class="column2"></td>
+          <td id="square9" class="column3"></td>
         </tr>
       </tbody>
     </table>
 
     <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
-    
+
     <script src="js/script.js" charset="utf-8"></script>
   </body>
 </html>
