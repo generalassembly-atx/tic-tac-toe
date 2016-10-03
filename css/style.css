@@ -11,6 +11,10 @@ table.board {
   font-size: 50px;
 }
 
+.o {
+  color: teal;
+}
+
 .board td {
   width: 100px;
   height: 100px;
