@@ -7,7 +7,7 @@
   </head>
   <body>
     <h1>Tic Tac Toe</h1>
-    <h2>Current Player: <span>1</span></h2>
+    <h2>Current Player: <span id="currentPlayer">1</span></h2>
 
     <table class="score">
       <thead>
@@ -17,35 +17,35 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>0</td>
-          <td>0</td>
+        <tr id="playerScore">
+          <td id="player1score">0</td>
+          <td id="player2score">0</td>
         </tr>
       </tbody>
     </table>
 
     <table class="board">
       <tbody>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
+        <tr class="rowOne">
+          <td class="square columnOne" id="r1c1"></td>
+          <td class="square columnTwo" id="r1c2"></td>
+          <td class="square columnThree" id="r1c3"></td>
         </tr>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
+        <tr class="rowTwo">
+          <td class="square columnOne" id="r2c1"></td>
+          <td class="square columnTwo" id="r2c2"></td>
+          <td class="square columnThree" id="r2c3"></td>
         </tr>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
+        <tr class="rowThree">
+          <td class="square columnOne" id="r3c1"></td>
+          <td class="square columnTwo" id="r3c2"></td>
+          <td class="square columnThree" id="r3c3"></td>
         </tr>
       </tbody>
     </table>
 
     <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
-    
+
     <script src="js/script.js" charset="utf-8"></script>
   </body>
 </html>
