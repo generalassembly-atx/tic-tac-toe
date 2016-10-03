@@ -8,6 +8,7 @@ $(document).ready(function () {
 });
 
 
+
 var count1 = 0;
 var count2 = 0;
 var countCat = 0;
@@ -27,7 +28,7 @@ function winAlert(e) {
   var diagnolRightWin = $('#column .3,.5,.7').text() === 'XXX' || $('#column .3,.5,.7').text() === 'OOO';
 
 
-  if (topRowWin || middleRowWin || bottomRowWin ||
+if (topRowWin || middleRowWin || bottomRowWin ||
       leftColumnWin || rightColumnWin || middleColumnWin ||
       diagnolRightWin || diagnolLeftWin) {
     alert('You Won' + ' ' + $('h2').text() + '!');
@@ -72,7 +73,9 @@ function changeUser(e) {
 function markSpace(e) {
   e.preventDefault()
 
-  if ($('#currentPlayer').html() === '1'){
+  if ($(this).html() != '') {
+          alert('TAKEN');
+  } else if ($('#currentPlayer').html() === '1'){
     $(this).addClass("marked").text('X');
 
   } else if ($('#currentPlayer').html() === '2') {
