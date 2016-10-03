@@ -4,6 +4,7 @@ $(document).ready(function () {
   $('.board').on('click', changeUser)
   $('td').on('click', markSpace)
   $('tr').on('click', winAlert)
+
 });
 
 
@@ -47,13 +48,15 @@ function winAlert(e) {
   } else if ($('#column .marked').length === 9) {
     function emptyBoard() {
       $('td.marked').empty().removeClass("marked")
-      alert('the cat won fucker');
+      alert('the cat won!');
         countCat++;
         $("#playerCatScore").html(" " + countCat);
     }
     return emptyBoard();
   }
 }
+
+
 
 
 function changeUser(e) {
