@@ -3,49 +3,50 @@
   <head>
     <meta charset="utf-8">
     <title>Tic Tac Toe</title>
+    <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css" media="screen" charset="utf-8">
   </head>
   <body>
     <h1>Tic Tac Toe</h1>
-    <h2>Current Player: <span>1</span></h2>
+    <h2>Current Player: <span id="currentPlayer">1</span></h2>
 
     <table class="score">
       <thead>
         <tr>
-          <th>Player 1 Score</th>
-          <th>Player 2 Score</th>
+          <th id="playerOne">Player 1 Score</th>
+          <th id="playerTwo">Player 2 Score</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td>0</td>
-          <td>0</td>
+          <td id="fieldSet1"class="fieldSet">0</td>
+          <td id="fieldSet2"class="fieldSet">0</td>
         </tr>
       </tbody>
     </table>
 
     <table class="board">
       <tbody>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
+        <tr class="row" id="row1">
+          <td id="a" class="square"></td>
+          <td id="b" class="square"></td>
+          <td id="c" class="square"></td>
         </tr>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
+        <tr class="row" id="row2">
+          <td id="d" class="square"></td>
+          <td id="e"class="square"></td>
+          <td id="f"class="square"></td>
         </tr>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
+        <tr class="row" id="row3s">
+          <td id="g"class="square"></td>
+          <td id="h"class="square"></td>
+          <td id="i"class="square"></td>
         </tr>
       </tbody>
     </table>
 
     <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
-    
+
     <script src="js/script.js" charset="utf-8"></script>
   </body>
 </html>

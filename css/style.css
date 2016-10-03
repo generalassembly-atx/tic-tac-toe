@@ -1,5 +1,7 @@
 body {
   text-align: center;
+  font-family: helvetica;
+  color: #778899;
 }
 
 table {
@@ -10,13 +12,20 @@ table.board {
   border-collapse: collapse;
   font-size: 50px;
 }
+th{
+  padding: 40px;
+}
 
 .board td {
   width: 100px;
   height: 100px;
   text-align: center;
-  border: 5px solid black;
+  border: 5px solid #bcbcf2;
   cursor: pointer;
+  color: teal;
+  font-family: 'Shadows Into Light', cursive;
+  font-size: 60px;
+
 }
 
 .board tr td:first-child {
