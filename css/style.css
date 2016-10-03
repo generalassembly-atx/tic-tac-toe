@@ -43,7 +43,7 @@ a.replay{
   color: #ffffff;
   padding: 10px 30px;
 }
-.winner{
+.winner, .warning{
   text-align: center;
   color: #ff0000;
 }

@@ -3,14 +3,12 @@ $(document).ready(function(){
   $('.boardCell').on('click', playerMove);
   $(document).on('click', '.replay', replayGame)
 })
+
 var currentPlayer = "X";
 var totalBoard = [];
-var playerXBoard = [];
-var playerOBoard = [];
 var playerXScore = "0";
 var playerYScore = "0";
 var canPlay;
-var winner;
 
 // Initialize new game
 function gameStart() {
@@ -22,11 +20,8 @@ function gameStart() {
   } else {
     playerNumber.text('Os');
   }
-  winner = "";
   $('.boardCell').text('');
   totalBoard = ['e', 'e', 'e', 'e', 'e', 'e', 'e', 'e', 'e'];
-  playerXBoard = ['e', 'e', 'e', 'e', 'e', 'e', 'e', 'e', 'e'];
-  playerOBoard = ['e', 'e', 'e', 'e', 'e', 'e', 'e', 'e', 'e'];
   var playerXScoreDisplay = $('#playerxscore').text(playerXScore);
   var playerOScoreDisplay = $('#playeroscore').text(playerYScore);
 
@@ -39,22 +34,9 @@ function playerMove(){
     if (canPlay){
       if (totalBoard[cell] === "e") {
         $('body').find('h3.warning').remove();
-        if (currentPlayer === "X"){
-          $(this).text(currentPlayer);
-          totalBoard[cell] = currentPlayer;
-          playerXBoard[cell] = currentPlayer;
-          //console.log(playerXBoard);
-          checkWinner();
-
-        } else {
-          $(this).text(currentPlayer);
-          totalBoard[cell] = currentPlayer;
-          playerOBoard[cell] = currentPlayer;
-          //console.log(playerOBoard);
-          checkWinner();
-
-        }
-
+        $(this).text(currentPlayer);
+        totalBoard[cell] = currentPlayer;
+        checkWinner();
       } else {
         $('body').find('h3.warning').remove();
         $('body').append('<h3 class="warning">This space is not available. Please select another.</h3>');
@@ -75,36 +57,31 @@ function switchPlayer(){
 }
 //Check to see if player won
 function checkWinner(){
-  if (currentPlayer === "X"){
-    currentBoard = playerXBoard;
-  } else {
-    currentBoard = playerOBoard;
-  }
   for (var x = 0; x < 7; x+=3){
-    if (currentBoard[x].indexOf("e") === -1 && currentBoard[x+1].indexOf("e") === -1 && currentBoard[x+2].indexOf("e") === -1 ){
+    if (totalBoard[x].indexOf(currentPlayer) > -1 && totalBoard[x+1] === totalBoard[x] && totalBoard[x+2] === totalBoard[x]){
         gameOver();
         return(currentPlayer);
-    }
+    } else {}
   }
   for (var x = 0; x < 3; x++){
-    if (currentBoard[x].indexOf("e") === -1 && currentBoard[x+3].indexOf("e") === -1 && currentBoard[x+6].indexOf("e") === -1 ){
+    if (totalBoard[x].indexOf(currentPlayer) > -1 && totalBoard[x+3] === totalBoard[x] && totalBoard[x+6] === totalBoard[x]){
       gameOver();
       return(currentPlayer);
-    }
+    } else {}
   }
-  if (currentBoard[0].indexOf("e") === -1 && currentBoard[4].indexOf("e") === -1 && currentBoard[8].indexOf("e") === -1 ){
+  if (totalBoard[0].indexOf(currentPlayer) > -1 && totalBoard[4] === totalBoard[0] && totalBoard[8]=== totalBoard[0]){
     gameOver();
     return(currentPlayer);
-  } else if (currentBoard[2].indexOf("e") === -1 && currentBoard[4].indexOf("e") === -1 && currentBoard[6].indexOf("e") === -1 ){
+  } else if (totalBoard[2].indexOf(currentPlayer) > -1 && totalBoard[4] === totalBoard[2] && totalBoard[6] === totalBoard[2]){
     gameOver();
     return(currentPlayer);
-  }
+  } else {}
   if (totalBoard.indexOf("e") === -1){
     currentPlayer = "cat";
     gameOver();
     }
   else {
-    //console.log(totalBoard.indexOf("e"));
+    //console.log(currentPlayer);
     switchPlayer();
   }
 }
@@ -115,11 +92,11 @@ function gameOver(){
   if (currentPlayer === "X"){
     playerXScore++;
     winningMessage = "Player 1 took the match!";
-    currentPlayer = "O";
+    switchPlayer();
   } else if (currentPlayer === "O"){
     playerYScore++;
     winningMessage = "Player 2 took the match!";
-    currentPlayer = "X"
+    switchPlayer();
   } else {
     winningMessage = "Meow!";
     currentPlayer = "X";
