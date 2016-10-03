@@ -104,7 +104,7 @@ function checkWinner(){
     gameOver();
     }
   else {
-    //console.log(totalBoard.indexOf("e"));
+    //console.log(currentPlayer);
     switchPlayer();
   }
 }
