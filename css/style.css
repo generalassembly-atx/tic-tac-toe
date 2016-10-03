@@ -1,5 +1,7 @@
 body {
   text-align: center;
+  background-color: darkblue;
+  color: white;
 }
 
 table {
@@ -33,4 +35,9 @@ table.board {
 
 .board tr:last-child td {
   border-bottom: none;
+}
+
+#winner {
+  color: darkred;
+  font-size: 40px;
 }

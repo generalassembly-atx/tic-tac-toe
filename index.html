@@ -7,45 +7,47 @@
   </head>
   <body>
     <h1>Tic Tac Toe</h1>
-    <h2>Current Player: <span>1</span></h2>
+    <h2>Current Player: <span class="player1turn" id="player1turn">1</span></h2>
 
     <table class="score">
       <thead>
         <tr>
-          <th>Player 1 Score</th>
-          <th>Player 2 Score</th>
+          <th>Player 1 Score:</th>
+          <th>Player 2 Score:</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td>0</td>
-          <td>0</td>
+          <td class="p1Score">0</td>
+          <td class="p2Score">0</td>
         </tr>
       </tbody>
     </table>
 
     <table class="board">
       <tbody>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
+        <tr class="row1">
+          <td id="1"></td>
+          <td id="2"></td>
+          <td id="3"></td>
         </tr>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
+        <tr class="row2">
+          <td id="4"></td>
+          <td id="5"></td>
+          <td id="6"></td>
         </tr>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
+        <tr class="row3">
+          <td id="7"></td>
+          <td id="8"></td>
+          <td id="9"></td>
         </tr>
       </tbody>
     </table>
 
+    <h2 id="winner"></h2>
+
     <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
-    
+
     <script src="js/script.js" charset="utf-8"></script>
   </body>
 </html>
