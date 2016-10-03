@@ -1,5 +1,6 @@
 body {
   text-align: center;
+   background-image: url('../images/trumpeagleattack.gif');
 }
 
 table {
@@ -9,8 +10,29 @@ table {
 table.board {
   border-collapse: collapse;
   font-size: 50px;
+  font-weight: bolder;
 }
 
+.column1{
+  color: red;
+}
+
+.column2{
+  color: white;
+}
+
+.column3{
+  color: blue;
+}
+body h1{
+  color: red;
+}
+body h2{
+  color: white;
+}
+thead tr{
+  color: blue;
+}
 .board td {
   width: 100px;
   height: 100px;
