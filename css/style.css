@@ -15,29 +15,63 @@ table.board {
 
 .column1{
   color: red;
+  font-family: 'Ruslan Display', cursive;
+  font-weight: 900;
+  font-size: 80px;
 }
 
 .column2{
   color: white;
+  font-family: 'Ruslan Display', cursive;
+  font-size: 80px;
+
+}
+#p1score, #p2score{
+  color: white;
 }
 
 .column3{
+  font-family: 'Ruslan Display', cursive;
   color: blue;
+  font-size: 80px;
+
+}
+#button1 {
+  height: 50px;
+  width: 120px;
+  background-color: rgba(0, 0, 0, 0.0)
+}
+
+#button2 {
+  height: 50px;
+  width: 10px;
+  background-color: rgba(0, 0, 0, 0.0)
+}
+
+
+#spot {
+  color: red
 }
 body h1{
   color: red;
+  font-family: 'Fjalla One', sans-serif;
+
 }
 body h2{
   color: white;
+  font-family: 'Fjalla One', sans-serif;
+
 }
 thead tr{
   color: blue;
+  font-family: 'Fjalla One', sans-serif;
+
 }
 .board td {
   width: 100px;
   height: 100px;
   text-align: center;
-  border: 5px solid black;
+  border: 5px solid white;
   cursor: pointer;
 }
 

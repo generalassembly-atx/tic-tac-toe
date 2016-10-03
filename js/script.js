@@ -1,6 +1,8 @@
 $(document).ready(function(){
   $('.board td').on('click', placePiece)
   $('td').on('click', findWin)
+  $('#button1').on('click', resetButton)
+  $('#button2').on('click', changePerson)
 
 });
 
@@ -8,6 +10,7 @@ var audio= new Audio('audio/welcometotheboardroom.mp3');
 audio.play();
 
 var count = 0;
+
 
 function placePiece(){
 
@@ -74,4 +77,10 @@ function findWin(e){
   }
 
 
+}
+function resetButton() {
+  $('.board td').empty();
+  }
+function changePerson() {
+  count= count-1
 }
