@@ -4,11 +4,11 @@
     <meta charset="utf-8">
     <title>Tic Tac Toe</title>
     <link rel="stylesheet" href="css/style.css" media="screen" charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Ruslan+Display" rel="stylesheet">
   </head>
   <body>
-    <h1>Tic Tac Toe</h1>
-    <h2>Current Player: <span>1</span></h2>
-
+    <h1>Trump Tac Toe</h1>
+    <h2>Current Player: <span id="turnNumber">1</span></h2>
     <table class="score">
       <thead>
         <tr>
@@ -17,35 +17,35 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>0</td>
-          <td>0</td>
+        <tr id="scores">
+          <td id="p1score">0</td>
+          <td id="p2score">0</td>
         </tr>
       </tbody>
     </table>
 
     <table class="board">
-      <tbody>
+      <tbody class"squares">
         <tr>
-          <td></td>
-          <td></td>
-          <td></td>
+          <td id="spot1" class="row1 column1"></td>
+          <td id="spot2" class="row1 column2"></td>
+          <td id="spot3" class="row1 column3"></td>
         </tr>
         <tr>
-          <td></td>
-          <td></td>
-          <td></td>
+          <td id="spot4" class="row2 column1"></td>
+          <td id="spot5" class="row2 column2"></td>
+          <td id="spot6" class="row2 column3"></td>
         </tr>
         <tr>
-          <td></td>
-          <td></td>
-          <td></td>
+          <td id="spot7" class="row3 column1"></td>
+          <td id="spot8" class="row3 column2"></td>
+          <td id="spot9" class="row3 column3"></td>
         </tr>
       </tbody>
     </table>
-
-    <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
-    
+    <button id="button1"></button>
+    <button id="button2"></button>
+<script   src="http://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
     <script src="js/script.js" charset="utf-8"></script>
   </body>
 </html>
