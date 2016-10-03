@@ -3,49 +3,54 @@
   <head>
     <meta charset="utf-8">
     <title>Tic Tac Toe</title>
+    <link href="https://fonts.googleapis.com/css?family=Bungee+Shade" rel="stylesheet">
+
     <link rel="stylesheet" href="css/style.css" media="screen" charset="utf-8">
   </head>
   <body>
-    <h1>Tic Tac Toe</h1>
-    <h2>Current Player: <span>1</span></h2>
+    <div class="background"></div>
+      <div class="content">
 
-    <table class="score">
-      <thead>
-        <tr>
-          <th>Player 1 Score</th>
-          <th>Player 2 Score</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>0</td>
-          <td>0</td>
-        </tr>
-      </tbody>
-    </table>
+      <h1>Tic Tac <span>Toe</span></h1>
+      <h2>Current Player: <span>1</span></h2>
 
-    <table class="board">
-      <tbody>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
-        </tr>
-      </tbody>
-    </table>
+      <table class="score">
+        <thead>
+          <tr>
+            <th>Player 1 Score</th>
+            <th>Player 2 Score</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class='scoreKeeper' id='p1Score'>0</td>
+            <td class='scoreKeeper' id='p2Score'>0</td>
+          </tr>
+        </tbody>
+      </table>
 
-    <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
-    
+      <table class="board">
+        <tbody>
+          <tr id="row1">
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr id="row2">
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr id="row3">
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+      <input type="submit" class="reset" value="Reset">
+      <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+    </div>
     <script src="js/script.js" charset="utf-8"></script>
   </body>
 </html>
