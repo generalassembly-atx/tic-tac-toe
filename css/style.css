@@ -12,10 +12,10 @@ table.board {
 }
 
 .board td {
-  width: 100px;
-  height: 100px;
+  width: 115px;
+  height: 115px;
   text-align: center;
-  border: 5px solid black;
+  border: 5px solid white;
   cursor: pointer;
 }
 
@@ -33,4 +33,45 @@ table.board {
 
 .board tr:last-child td {
   border-bottom: none;
+}
+
+.x {
+  background-image: url('../images/x.png');
+  background-size: 70px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.o {
+  background-image: url('../images/o.png');
+  background-position: center;
+  background-size: 75px;
+  background-repeat: no-repeat;
+}
+
+.score {
+  margin-bottom: 5%;
+}
+
+.score th {
+  padding: 10px;
+}
+
+.score td {
+  padding-top: 5px;
+  padding-bottom: 10px;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.score span {
+  padding: 0 2px 0 2px;
+}
+
+.winner {
+  display: none;
+}
+
+.title {
+  font-size: 45px;
 }
