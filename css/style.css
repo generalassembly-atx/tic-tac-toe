@@ -1,5 +1,17 @@
-body {
-  text-align: center;
+
+button {
+  height: 40px;
+  width: 80px;
+  font-family: Helvetica;
+  border-radius: 15%;
+  border-color: transparent;;
+  background-color: transparent;;
+  color: black;
+  font-size: 20px;
+}
+
+th {
+  padding: 0 40px;
 }
 
 table {
@@ -21,6 +33,7 @@ table.board {
 
 .board tr td:first-child {
   border-left: none;
+  color: black;
 }
 
 .board tr td:last-child {
@@ -34,3 +47,148 @@ table.board {
 .board tr:last-child td {
   border-bottom: none;
 }
+
+/*
+wahooo!!!!!!! It worked!!!
+*/
+
+html, body {
+	width: 100%;
+	height: 100%;
+	padding: 0;
+	margin: 0;
+}
+
+body {
+  text-align: center;
+  background-color: transparent;
+  color: black;
+  font-size: 25px;
+  font-family: Helvetica;
+
+
+	/* Chrome,Safari4+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ff3232), color-stop(16%,#fcf528), color-stop(32%,#28fc28), color-stop(50%,#28fcf8), color-stop(66%,#272ef9), color-stop(82%,#ff28fb), color-stop(100%,#ff3232));
+
+	/* Chrome10+,Safari5.1+ */
+	background: -webkit-linear-gradient(top, #ff3232 0%,#fcf528 16%,#28fc28 32%,#28fcf8 50%,#272ef9 66%,#ff28fb 82%,#ff3232 100%);
+
+	background-size: 1000%;
+	-moz-background-size: 1000%;
+	-webkit-background-size: 1000%;
+
+	/* Chrome, Safari */
+	-webkit-animation-name: fun-time-awesome;
+	-webkit-animation-duration: 40s;
+	-webkit-animation-timing-function: linear;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-direction: alternate;
+	-webkit-animation-play-state: running;
+}
+/* Chrome, Safari */
+@-webkit-keyframes fun-time-awesome {
+	0% {background-position: left top;}
+	100% {background-position: left bottom;}
+}
+
+div {
+	position: relative;
+	z-index: 20;
+}
+#crushin {
+	position: absolute;
+	bottom: 10px;
+	left: 10px;
+	z-index: 50;
+}
+audio {
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+	z-index: 50;
+	opacity: 0;
+}
+#counter {
+	position: absolute;
+	bottom: 10px;
+	width: 100%;
+	text-align: center;
+	z-index: 50;
+}
+.face-source {
+	display: none;
+}
+#faces-container {
+	height: 100%;
+}
+
+
+/* mobile phone */
+@media screen and (max-device-width: 480px) {
+	body {
+		height: 120%;
+	}
+	h1 {
+		font-size: 25px;
+	}
+	h2 {
+		font-size: 12px;
+		top: 50px;
+	}
+	audio {
+		opacity: 1;
+		bottom: 30px;
+		top: 90px;
+		left: 10px;
+	}
+	#crushin {
+		display: none;
+	}
+	#counter {
+		top: 380px;
+	}
+}
+/*.rainbow {
+  background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
+  background-image: gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
+  color:transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}*/
+/*.wrapper {
+  height: 100%;
+  width: 100%;
+  left:0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
+background-size: 1800% 1800%;
+
+-webkit-animation: rainbow 10s ease infinite;
+-z-animation: rainbow 10s ease infinite;
+-o-animation: rainbow 10s ease infinite;
+  animation: rainbow 10s ease infinite;
+}
+
+@-webkit-keyframes rainbow {
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
+@-moz-keyframes rainbow {
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
+@-o-keyframes rainbow {
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
+@keyframes rainbow {
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}*/
