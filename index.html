@@ -3,6 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>Tic Tac Toe</title>
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker|Righteous" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css" media="screen" charset="utf-8">
   </head>
   <body>
@@ -18,8 +21,8 @@
       </thead>
       <tbody>
         <tr>
-          <td>0</td>
-          <td>0</td>
+          <td id="playerxscore">0</td>
+          <td id="playeroscore"></td>
         </tr>
       </tbody>
     </table>
@@ -27,25 +30,26 @@
     <table class="board">
       <tbody>
         <tr>
-          <td></td>
-          <td></td>
-          <td></td>
+          <td class="boardCell" id="0"></td>
+          <td class="boardCell" id="1"></td>
+          <td class="boardCell" id="2"></td>
         </tr>
         <tr>
-          <td></td>
-          <td></td>
-          <td></td>
+          <td class="boardCell" id="3"></td>
+          <td class="boardCell" id="4"></td>
+          <td class="boardCell" id="5"></td>
         </tr>
         <tr>
-          <td></td>
-          <td></td>
-          <td></td>
+          <td class="boardCell" id="6"></td>
+          <td class="boardCell" id="7"></td>
+          <td class="boardCell" id="8"></td>
         </tr>
       </tbody>
     </table>
 
     <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
-    
-    <script src="js/script.js" charset="utf-8"></script>
+
+    <!-- <script src="js/script.js" charset="utf-8"></script> -->
+    <script src="js/script2.js" charset="utf-8"></script>
   </body>
 </html>

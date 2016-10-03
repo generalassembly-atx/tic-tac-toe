@@ -1,5 +1,17 @@
 body {
   text-align: center;
+  font-family: sans-serif;
+  color: #333333;
+  margin: 0 auto;
+  font-family: 'PT Sans', sans-serif;
+  font-size: 12px;
+  background-color: #efefef;
+}
+
+h1{
+  font-family: 'Righteous', cursive;
+  font-size: 50px;
+  text-transform: uppercase;
 }
 
 table {
@@ -15,10 +27,14 @@ table.board {
   width: 100px;
   height: 100px;
   text-align: center;
-  border: 5px solid black;
+  border: 4px inset #333333;
   cursor: pointer;
+  font-family: 'Permanent Marker', cursive;
+  font-size: 42px;
 }
-
+.score td, th{
+  padding: 5px 20px;
+}
 .board tr td:first-child {
   border-left: none;
 }
@@ -33,4 +49,16 @@ table.board {
 
 .board tr:last-child td {
   border-bottom: none;
+}
+a.replay{
+  display: inline-block;
+  text-decoration: none;
+  font-weight: bold;
+  background-color: #000099;
+  color: #ffffff;
+  padding: 10px 30px;
+}
+.winner, .warning{
+  text-align: center;
+  color: #ff0000;
 }
