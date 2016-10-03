@@ -1,5 +1,6 @@
 body {
   text-align: center;
+  background-image:url("space.jpg");
 }
 
 table {
@@ -33,4 +34,5 @@ table.board {
 
 .board tr:last-child td {
   border-bottom: none;
+
 }
