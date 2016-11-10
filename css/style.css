@@ -2,8 +2,14 @@ body {
   text-align: center;
 }
 
+h3 {
+  color: magenta;
+  display: none;
+}
+
 table {
   margin: 20px auto;
+  width: 30%;
 }
 
 table.board {
@@ -11,8 +17,12 @@ table.board {
   font-size: 50px;
 }
 
-.o {
+.O {
   color: teal;
+}
+
+.X {
+  color: gold;
 }
 
 .board td {
