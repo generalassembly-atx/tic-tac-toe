@@ -36,11 +36,11 @@ function checkPlayer(element) {
   var currentPlayer = $('#current span').text();
 
   if (currentPlayer === '1') {
-    element.text('X');
+    element.text('X').addClass('X');
     window.setTimeout(checkForMatch,1000);
     $('#current span').text('2');
   } else {
-    element.text('O');
+    element.text('O').addClass('O');
     window.setTimeout(checkForMatch,1000);
     $('#current span').text('1');
   }
@@ -60,7 +60,7 @@ function checkForMatch() {
   var playerOneScore = parseInt($('#playerOneScore').text());
   var playerTwoScore = parseInt($('#playerTwoScore').text());
 
-  var playerOneWins = row1 === "XXX" || row2 === "XXX" || row3 === "XXX" || rDiagonal === "XXX" || rDiagonal === "XXX" || col1 === "XXX" || col2 === "XXX" || col3 === "XXX";
+  var playerOneWins = row1 === "XXX" || row2 === "XXX" || row3 === "XXX" || rDiagonal === "XXX" || lDiagonal === "XXX" || col1 === "XXX" || col2 === "XXX" || col3 === "XXX";
   var playerTwoWins = row1 === "OOO" || row2 === "OOO" || row3 === "OOO" || rDiagonal === "OOO" || lDiagonal === "OOO" || col1 === "OOO" || col2 === "OOO" || col3 === "OOO";
 
   if (playerOneWins) {
@@ -80,7 +80,7 @@ function checkForMatch() {
 }
 
 function resetBoard() {
-  $('.board').find('td').text('');
+  $('.board').find('td').text('').removeClass('O', 'X');
   removeMessage('win');
   removeMessage('draw');
 }

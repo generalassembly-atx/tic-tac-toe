@@ -1,6 +1,7 @@
 body {
   text-align: center;
   font-family: 'Helvetica', sans-serif;
+  background-color: #4ABDAC;
 }
 
 #alertContainer {
@@ -18,14 +19,14 @@ body {
 h3 {
   font-size: 30px;
   text-transform: uppercase;
-  color: magenta;
+  color: #FC4A1A;
   z-index: 1;
   display: none;
   position: relative;
 }
 
-.message {
-
+h1, h2, th, td, button, .X{
+  color: #DFDCE3;
 }
 
 table {
@@ -38,19 +39,15 @@ table.board {
   font-size: 50px;
 }
 
-.O {
-  color: teal;
-}
-
-.X {
-  color: gold;
+.O, .playerTwoScore {
+  color: #F7B733;
 }
 
 .board td {
   width: 100px;
   height: 100px;
   text-align: center;
-  border: 5px solid black;
+  border: 5px solid #DFDCE3;
   cursor: pointer;
 }
 
@@ -68,4 +65,18 @@ table.board {
 
 .board tr:last-child td {
   border-bottom: none;
+}
+
+button {
+  background-color: #F7B733;
+  font-size: 20px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 3px;
+}
+
+button:hover {
+  background-color: #f8c154;
+  cursor: pointer;
+  background-color:
 }
