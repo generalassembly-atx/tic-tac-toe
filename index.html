@@ -6,20 +6,27 @@
     <link rel="stylesheet" href="css/style.css" media="screen" charset="utf-8">
   </head>
   <body>
+    <div id="alertContainer">
+      <div id="alertContainerInner">
+        <h3 id="full">That space is already taken!</h3>
+        <h3 id="win">We have a winner!</h3>
+        <h3 id="draw">It's a draw!</h3>
+      </div>
+    </div>
     <h1>Tic Tac Toe</h1>
-    <h2>Current Player: <span>1</span></h2>
+    <h2 id="current">Current Player: <span>1</span></h2>
 
     <table class="score">
       <thead>
         <tr>
           <th>Player 1 Score</th>
-          <th>Player 2 Score</th>
+          <th class="playerTwoScore">Player 2 Score</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td>0</td>
-          <td>0</td>
+          <td id="playerOneScore">0</td>
+          <td class="playerTwoScore">0</td>
         </tr>
       </tbody>
     </table>
@@ -27,25 +34,26 @@
     <table class="board">
       <tbody>
         <tr>
-          <td></td>
-          <td></td>
-          <td></td>
+          <td class="row1 rDiagonal col1"></td>
+          <td class="row1 col2"></td>
+          <td class="row1 lDiagonal col3"></td>
         </tr>
         <tr>
-          <td></td>
-          <td></td>
-          <td></td>
+          <td class="row2 col1"></td>
+          <td class="row2 rDiagonal lDiagonal col2"></td>
+          <td class="row2 col3"></td>
         </tr>
         <tr>
-          <td></td>
-          <td></td>
-          <td></td>
+          <td class="row3 lDiagonal col1"></td>
+          <td class="row3 col2"></td>
+          <td class="row3 rDiagonal col3"></td>
         </tr>
       </tbody>
     </table>
 
+    <button id="restart">Restart</button>
     <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
-    
+
     <script src="js/script.js" charset="utf-8"></script>
   </body>
 </html>

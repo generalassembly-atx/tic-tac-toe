@@ -1,9 +1,44 @@
 body {
   text-align: center;
+  font-family: 'Helvetica', sans-serif;
+  background-color: #4ABDAC;
+}
+
+#alertContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+#alertContainerInner {
+  width: 40%;
+  background-color: #DFDCE3;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+h3 {
+  font-size: 30px;
+  text-transform: uppercase;
+  color: #FC4A1A;
+  z-index: 1;
+  display: none;
+  position: relative;
+}
+
+h1, h2, th, td, button, .X{
+  color: #DFDCE3;
 }
 
 table {
   margin: 20px auto;
+  width: 30%;
 }
 
 table.board {
@@ -11,11 +46,15 @@ table.board {
   font-size: 50px;
 }
 
+.O, .playerTwoScore {
+  color: #F7B733;
+}
+
 .board td {
   width: 100px;
   height: 100px;
   text-align: center;
-  border: 5px solid black;
+  border: 5px solid #DFDCE3;
   cursor: pointer;
 }
 
@@ -33,4 +72,18 @@ table.board {
 
 .board tr:last-child td {
   border-bottom: none;
+}
+
+button {
+  background-color: #F7B733;
+  font-size: 20px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 3px;
+}
+
+button:hover {
+  background-color: #f8c154;
+  cursor: pointer;
+  background-color:
 }
