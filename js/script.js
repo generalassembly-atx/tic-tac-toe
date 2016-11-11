@@ -10,8 +10,11 @@ function makeAMove(e) {
 
 //Check for marked square
   if(cell.text() !== "") {
-    showFullMessage();
-    window.setTimeout(removeFullMessage,1500);
+    showMessage('full');
+
+    window.setTimeout(function () {
+      removeMessage('full');
+    },1500);
     return false;
   }
 
@@ -19,20 +22,14 @@ function makeAMove(e) {
   checkPlayer(cell);
 }
 
-function showFullMessage() {
-  $('#cellFull').css('display','block');
+function showMessage(name) {
+  $('#alertContainer').css('display', 'flex');
+  $('#' + name).css('display','block');
 }
 
-function removeFullMessage() {
-  $('#cellFull').css('display','none');
-}
-
-function showWinMessage() {
-  $('#winner').css('display','block');
-}
-
-function showDrawMessage() {
-  $('#draw').css('display','block');
+function removeMessage(name) {
+  $('#alertContainer').css('display', 'none');
+  $('#' + name).css('display','none');
 }
 
 function checkPlayer(element) {
@@ -67,25 +64,25 @@ function checkForMatch() {
   var playerTwoWins = row1 === "OOO" || row2 === "OOO" || row3 === "OOO" || rDiagonal === "OOO" || lDiagonal === "OOO" || col1 === "OOO" || col2 === "OOO" || col3 === "OOO";
 
   if (playerOneWins) {
-    showWinMessage();
+    showMessage('win');
     playerOneScore ++;
     $('#playerOneScore').text(playerOneScore);
     window.setTimeout(resetBoard,1500);
   } else if (playerTwoWins) {
-    showWinMessage();
+    showMessage('win');
     playerTwoScore ++;
     $('#playerTwoScore').text(playerTwoScore);
     window.setTimeout(resetBoard,1500);
   } else if ((row1 + row2 + row3).length === 9) {
-    showDrawMessage();
+    showMessage('draw');
     window.setTimeout(resetBoard,1500);
   }
 }
 
 function resetBoard() {
   $('.board').find('td').text('');
-  $('#winner').css('display','none');
-  $('#draw').css('display','none');
+  removeMessage('win');
+  removeMessage('draw');
 }
 
 function restart() {
