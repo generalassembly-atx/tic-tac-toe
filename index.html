@@ -7,7 +7,7 @@
   </head>
   <body>
     <h1>Tic Tac Toe</h1>
-    <h2>Current Player: <span>1</span></h2>
+    <h2>Current Player: <span class="playerTurn">1</span></h2>
 
     <table class="score">
       <thead>
@@ -18,8 +18,8 @@
       </thead>
       <tbody>
         <tr>
-          <td>0</td>
-          <td>0</td>
+          <td id="player-1-score">0</td>
+          <td id="player-2-score">0</td>
         </tr>
       </tbody>
     </table>
@@ -27,25 +27,25 @@
     <table class="board">
       <tbody>
         <tr>
-          <td></td>
-          <td></td>
-          <td></td>
+          <td class='box' id='1'></td>
+          <td class='box' id='2'></td>
+          <td class='box'id='3'></td>
         </tr>
         <tr>
-          <td></td>
-          <td></td>
-          <td></td>
+          <td class='box'id='4'></td>
+          <td class='box' id='5'></td>
+          <td class='box' id='6'></td>
         </tr>
         <tr>
-          <td></td>
-          <td></td>
-          <td></td>
+          <td class='box' id='7'></td>
+          <td class='box' id='8'></td>
+          <td class='box' id='9'></td>
         </tr>
       </tbody>
     </table>
 
     <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
-    
+
     <script src="js/script.js" charset="utf-8"></script>
   </body>
 </html>
