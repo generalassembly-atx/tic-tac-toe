@@ -7,7 +7,9 @@
   </head>
   <body>
     <h1>Tic Tac Toe</h1>
-    <h2>Current Player: <span>1</span></h2>
+    <h2>Current Player: <span id="player">1</span><br>
+  <span id="text"></span>
+    </h2>
 
     <table class="score">
       <thead>
@@ -18,8 +20,8 @@
       </thead>
       <tbody>
         <tr>
-          <td>0</td>
-          <td>0</td>
+          <td id="score1">0</td>
+          <td id="score2">0</td>
         </tr>
       </tbody>
     </table>
@@ -27,19 +29,19 @@
     <table class="board">
       <tbody>
         <tr>
-          <td></td>
-          <td></td>
-          <td></td>
+          <td id="1" class="box"></td>
+          <td id="2" class="box"></td>></td>
+          <td id="3" class="box"></td>
         </tr>
         <tr>
-          <td></td>
-          <td></td>
-          <td></td>
+          <td id="4" class="box"></td>
+          <td id="5" class="box"></td>
+          <td id="6" class="box"></td>
         </tr>
         <tr>
-          <td></td>
-          <td></td>
-          <td></td>
+          <td id="7" class="box"></td>
+          <td id="8" class="box"></td>
+          <td id="9" class="box"></td>
         </tr>
       </tbody>
     </table>
