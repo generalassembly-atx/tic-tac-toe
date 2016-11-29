@@ -11,41 +11,42 @@
 
     <table class="score">
       <thead>
-        <tr>
+        <tr class="players">
           <th>Player 1 Score</th>
           <th>Player 2 Score</th>
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>0</td>
-          <td>0</td>
+        <tr class="player_scores">
+          <td class="player1_score"></td>
+          <td class="player2_score"></td>
         </tr>
       </tbody>
     </table>
 
     <table class="board">
       <tbody>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
+        <tr class="row1">
+          <td class="c1" id="d1"></td>
+          <td class="c2"></td>
+          <td class="c3" id="d4"></td>
         </tr>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
+        <tr class="row2">
+          <td class="c1"></td>
+          <td class="c2" id="d2"></td>
+          <td class="c3"></td>
         </tr>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
+        <tr class="row3">
+          <td class="c1" id="d5"></td>
+          <td class="c2"></td>
+          <td class="c3" id="d3"></td>
         </tr>
       </tbody>
     </table>
+		<button type="button" name="button" id="btn-show">Play again!</button>
 
     <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
-    
+
     <script src="js/script.js" charset="utf-8"></script>
   </body>
 </html>
