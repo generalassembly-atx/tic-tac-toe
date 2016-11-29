@@ -18,6 +18,9 @@ table.board {
   border: 5px solid black;
   cursor: pointer;
 }
+#winner {
+  color: red;
+}
 
 .board tr td:first-child {
   border-left: none;
