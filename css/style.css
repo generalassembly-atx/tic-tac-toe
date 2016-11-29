@@ -1,5 +1,6 @@
 body {
   text-align: center;
+  font-family: helvetica;
 }
 
 table {
@@ -33,4 +34,11 @@ table.board {
 
 .board tr:last-child td {
   border-bottom: none;
+}
+
+#reset-btn {
+  padding: 10px;
+  margin-top: 20px;
+  font-size: 14px;
+  background-color: white;
 }
