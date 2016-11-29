@@ -13,7 +13,8 @@ var box = '.box',
 
 
 $(box).on('click',function(e){	
-	if($(this).text() === ""){
+	if($(this).text()){
+		return;}
 
 	if($(player).text() === '1'){
 		$(player).text('2');
@@ -36,7 +37,7 @@ $(box).on('click',function(e){
 		checkWin();
 		tie();
 		console.log(icon)
-	}
+	
 };
 });
 
