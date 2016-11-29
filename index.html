@@ -7,7 +7,7 @@
   </head>
   <body>
     <h1>Tic Tac Toe</h1>
-    <h2>Current Player: <span>1</span></h2>
+    <h2>Current Player: <span id="current">1</span></h2>
 
     <table class="score">
       <thead>
@@ -15,37 +15,39 @@
           <th>Player 1 Score</th>
           <th>Player 2 Score</th>
         </tr>
+        <h1 id="winner"></h1>
       </thead>
       <tbody>
         <tr>
-          <td>0</td>
-          <td>0</td>
+          <td id="score1">0</td>
+          <td id="score2">0</td>
         </tr>
       </tbody>
     </table>
 
     <table class="board">
       <tbody>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
+        <tr id="row1">
+          <td id="td1"></td>
+          <td id="td2"></td>
+          <td id="td3"></td>
         </tr>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
+        <tr id="row2">
+          <td id="td4"></td>
+          <td id="td5"></td>
+          <td id="td6"></td>
         </tr>
-        <tr>
-          <td></td>
-          <td></td>
-          <td></td>
+        <tr id="row3">
+          <td id="td7"></td>
+          <td id="td8"></td>
+          <td id="td9"></td>
         </tr>
       </tbody>
     </table>
+    <button id='reset'>Reset</button>
 
     <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
-    
+
     <script src="js/script.js" charset="utf-8"></script>
   </body>
 </html>
