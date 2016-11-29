@@ -2,9 +2,9 @@
 $(function (){
 var counter = 0;
 var player = $('#current');
-var winner1 = $('#score1');
-var winner2 = $('#score2');
-var currentPlayer = player.text();
+var playerWin = $('#current').text();
+var scoreCounter = 0;
+var score = 0;
 
 $('.board tbody td').on('click', clickCounter);
 
@@ -31,6 +31,7 @@ if (spaceTaken(this) === false){
 
 
 
+
 function spaceTaken(t){
  if($(t).text() !== ''){
    return true;
@@ -52,10 +53,11 @@ function isWinner(){
 
  ];
  var winner = false;
- if (counter >= '9'){
-   $('#winner').text("It's a cat's game!");
-
- }
+if (counter >= '9'){
+  $('#winner').text("It's a cat's game!");
+  $('.board tbody td').empty();
+  counter = 0
+}
 
  combos.forEach(function(combo,i){
    var win = ($(combo[0]).text() && ($(combo[1]).text()) === $(combo[2]).text()) && ($(combo[3]).text()=== $(combo[4]).text());
