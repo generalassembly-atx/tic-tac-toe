@@ -1,5 +1,6 @@
 body {
   text-align: center;
+  background: -webkit-linear-gradient(left top, #ff6666, yellow);
 }
 
 table {
