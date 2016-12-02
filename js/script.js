@@ -12,7 +12,7 @@
 
 $ (function(){
 var box = '.box';
-var player = '.player';
+var player = '.player'; 
 var symbol;
 
 function switchPlayer(){
