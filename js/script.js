@@ -20,17 +20,17 @@ $(document).ready(function() {
     if ($(this).text() === "") {
       if (player1) {
         $(this).text('X');
-        $('#currentPlayer').text('2')
       } else if (player2) {
         $(this).text('O');
-        $('#currentPlayer').text('1')
       }
-      // checks to see if winning conditions have been met
-      isWinner();
-      // switches player turn
-      switchTurn();
-      // increments turn used to check for a cat's game
-      turns++;
+
+
+      /* So you switch the player*/
+
+      switchTurn(); // switches player turn
+      isWinner(); // checks to see if winning conditions have been met
+
+      turns++; // increments turn used to check for a cat's game
     }
 
     //checks for tie game
@@ -42,6 +42,9 @@ $(document).ready(function() {
   });
 
   function isWinner() {
+
+    console.log('when isWinner is called, the current player is: ' + $('#currentPlayer').text())
+
     //extracts string of the current/winning player
     playerWin = $('#currentPlayer').text();
 
@@ -61,14 +64,17 @@ $(document).ready(function() {
       if( cell[item[0]] && (cell[item[0]] === cell[item[1]] && cell[item[2]] === cell[item[3]]) ) {
 
         // checks to see where to increment the score
-        (playerWin === '1') ? $('#p2Score').text(++p2Score) : $('#p1Score').text(++p1Score)
-        $('#currentPlayer').text("YOU WIN!");
+        (playerWin === '1') ? $('#p2Score').text(++p2Score) : $('#p1Score').text(++p1Score);
 
+        // displays win message
+        (playerWin === '1') ? $('#currentPlayer').text("Player 2 WINS!") : $('#currentPlayer').text("Player 1 WINS!")
+      
         playButton();
 
         // flagged so that we can no longer can enter Xs & Os
         gameOver = true;
       }
+
     }); // end of forEach
   }
 
@@ -79,8 +85,19 @@ $(document).ready(function() {
 
   // switches boolean values of players
   function switchTurn(){
+
+    var a = $('#currentPlayer').text()
+
+    console.log("the current player was: " + a);
+
     player1 = !player1;
     player2 = !player2;
+
+    ($('#currentPlayer').text() === '1') ? $('#currentPlayer').text('2') : $('#currentPlayer').text('1');
+
+    var b = $('#currentPlayer').text();
+    console.log("the current player is NOW: " + b);
+
   }
 
   // resets board
