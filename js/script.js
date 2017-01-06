@@ -24,9 +24,6 @@ $(document).ready(function() {
         $(this).text('O');
       }
 
-
-      /* So you switch the player*/
-
       switchTurn(); // switches player turn
       isWinner(); // checks to see if winning conditions have been met
 
@@ -34,7 +31,7 @@ $(document).ready(function() {
     }
 
     //checks for tie game
-    if (turns >= maxTurns) {
+    if (turns >= maxTurns && gameOver !== true ) {
       playButton();
       $('#currentPlayer').text("Cat's Game!")
       gameOver = true;
@@ -42,8 +39,6 @@ $(document).ready(function() {
   });
 
   function isWinner() {
-
-    console.log('when isWinner is called, the current player is: ' + $('#currentPlayer').text())
 
     //extracts string of the current/winning player
     playerWin = $('#currentPlayer').text();
@@ -66,9 +61,9 @@ $(document).ready(function() {
         // checks to see where to increment the score
         (playerWin === '1') ? $('#p2Score').text(++p2Score) : $('#p1Score').text(++p1Score);
 
-        // displays win message
+        //displays win message
         (playerWin === '1') ? $('#currentPlayer').text("Player 2 WINS!") : $('#currentPlayer').text("Player 1 WINS!")
-      
+
         playButton();
 
         // flagged so that we can no longer can enter Xs & Os
