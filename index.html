@@ -7,14 +7,18 @@
   </head>
   <body>
     <h1>Tic Tac Toe</h1>
-    <!-- <h3>Current Player: </h3> -->
-    <div id='currentPlayer'>1</div>
+    <h2 id='msgDisplay'></h3>
+    <h2 id='turnStatus'>
+      <span id='currentPlayer'>X</span>
+      <span id='turn'> Turn</span>
+    </h2>
 
+    <!-- score labels -->
     <table class="score">
       <thead>
         <tr>
-          <th>Player 1 Score</th>
-          <th>Player 2 Score</th>
+          <th>Player <span class='xStyle'>X</span> Score</th>
+          <th>Player <span class='oStyle'>O</span> Score</th>
         </tr>
       </thead>
       <tbody>
@@ -25,6 +29,7 @@
       </tbody>
     </table>
 
+    <!-- tic tac toe board -->
     <table class="board">
       <tbody>
         <tr>
@@ -46,7 +51,6 @@
     </table>
 
     <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
-
     <script src="js/script.js" charset="utf-8"></script>
   </body>
 </html>
