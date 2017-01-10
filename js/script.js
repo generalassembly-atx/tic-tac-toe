@@ -3,7 +3,6 @@ $(document).ready(function() {
   var p1Score = 0, p2Score = 0;
   var player1 = true, player2 = false;
   var gameOver = false;
-  var playerWin;
 
   // performs game's mechanic on user input
   $('.board').on('click', 'td', function() {
@@ -13,9 +12,9 @@ $(document).ready(function() {
     // checks to see if no value exists before allowing input
     if ($(this).text() === "") {
       if (player1) {
-        $(this).text('X');
+        $(this).html("<div class='xcolor'>X</div>");
       } else if (player2) {
-        $(this).text('O');
+        $(this).html("<div class='ocolor'>O</div>");
       }
 
       // starts checking for win condition when possible
@@ -29,7 +28,7 @@ $(document).ready(function() {
     //checks for tie game
     if (turns >= maxTurns && gameOver !== true ) {
       playButton();
-      $('#msgDisplay').show().text('Tie Game');
+      $('#msgDisplay').show().html("<div class='fadeIn'>Tie Game</div>");
       $('#turnStatus').hide();
       gameOver = true;
     }
@@ -42,11 +41,12 @@ $(document).ready(function() {
 
   // checks for winner
   function isWinner() {
-    playerWin = $('#currentPlayer').text();
+    var playerWin = $('#currentPlayer').text();
+    var indexes = [0,1,3];
 
-    var cell = [ $('#0').text(), $('#1').text(), $('#2').text(),
-                 $('#3').text(), $('#4').text(), $('#5').text(),
-                 $('#6').text(), $('#7').text(), $('#8').text() ];
+    var cell = [ $('#0'), $('#1'), $('#2'),
+                 $('#3'), $('#4'), $('#5'),
+                 $('#6'), $('#7'), $('#8') ];
 
     /* this lists all the possible winning combinations. It uses the transitive property: 'if a=b and b=c, then a=c'
     which in effect yields the winning condition of matching 3 in a row */
@@ -57,15 +57,20 @@ $(document).ready(function() {
     // iterate the cell items through the winning combinations comparing them for a match
     winCombos.forEach(function(item) {
       // the first conditional value evaluates to a truthy-falsy value and is used to overcome the issue of empty cells ("") being equal.
-      if( cell[item[0]] && (cell[item[0]] === cell[item[1]] && cell[item[2]] === cell[item[3]]) ) {
+      if( cell[item[0]].text() && (cell[item[0]].text() === cell[item[1]].text() && cell[item[2]].text() === cell[item[3]].text()) ) {
 
-        // increment the score & display win message
+        // increment the score and display win message
         if (playerWin === 'X') {
           $('#p1Score').text(++p1Score)
-          $('#msgDisplay').show().html("Player X WINS!")
+          $('#msgDisplay').show().html('<div class="fadeIn">Player <span class=\'xcolor\'>X</span> WINS!</div>')
         } else {
           $('#p2Score').text(++p2Score);
-          $('#msgDisplay').show().html("Player O WINS!")
+          $('#msgDisplay').show().html('<div class="fadeIn">Player <span class=\'ocolor\'>O</span> WINS!</div>')
+        }
+
+        // turns winning values red
+        for (var i=0; i<indexes.length; i++) {
+          cell[item[indexes[i]]].children().addClass('red')
         }
 
         $('#turnStatus').hide();
@@ -75,7 +80,7 @@ $(document).ready(function() {
     }); // end of forEach
   }
 
-  // creates button
+  // creates button to allow replay
   function playButton () {
     $('body').append('<button>Play Again?</button>')
   }
@@ -84,7 +89,7 @@ $(document).ready(function() {
   function switchTurn(){
     player1 = !player1;
     player2 = !player2;
-    ($('#currentPlayer').text() === 'X') ? $('#currentPlayer').text('O') : $('#currentPlayer').text('X');
+    ($('#currentPlayer').text() === 'X') ? $('#currentPlayer').text('O').removeClass('xcolor').addClass('ocolor') : $('#currentPlayer').text('X').removeClass('ocolor').addClass('xcolor');
   }
 
   // resets board
@@ -94,7 +99,7 @@ $(document).ready(function() {
     player1 = true;
     player2 = false;
     $('#turnStatus').show();
-    $('#currentPlayer').text('X');
+    $('#currentPlayer').text('X').removeClass('ocolor').addClass('xcolor');
     $('#msgDisplay').hide();
     $('button').remove();
     $('.board td').text("");
