@@ -1,7 +1,7 @@
 $(document).ready(function() {
   var turns = 0, maxTurns = 9;
   var p1Score = 0, p2Score = 0;
-  var player1 = true, player2 = false;
+  var player1 = true;
   var gameOver = false;
 
   // performs game's mechanic on user input
@@ -12,15 +12,13 @@ $(document).ready(function() {
     // checks to see if no value exists before allowing input
     if ($(this).text() === "") {
       if (player1) {
-        $(this).html("<div class='xcolor'>X</div>");
-      } else if (player2) {
-        $(this).html("<div class='ocolor'>O</div>");
+        $(this).html("<div class='xColor'>X</div>");
+      } else {
+        $(this).html("<div class='oColor'>O</div>");
       }
 
       // starts checking for win condition when possible
-      if (turns >= 4) {
-        isWinner();
-      }
+      if (turns >= 4) { isWinner(); }
       switchTurn();
       turns++; // increments turn used to check for a tie game
     }
@@ -62,10 +60,10 @@ $(document).ready(function() {
         // increment the score and display win message
         if (playerWin === 'X') {
           $('#p1Score').text(++p1Score)
-          $('#msgDisplay').show().html('<div class="fadeIn">Player <span class=\'xcolor\'>X</span> WINS!</div>')
+          $('#msgDisplay').show().html('<div class="fadeIn">Player <span id=\'winner\' class=\'xColor\'>X</span> WINS!</div>')
         } else {
           $('#p2Score').text(++p2Score);
-          $('#msgDisplay').show().html('<div class="fadeIn">Player <span class=\'ocolor\'>O</span> WINS!</div>')
+          $('#msgDisplay').show().html('<div class="fadeIn">Player <span id=\'winner\' class=\'oColor\'>O</span> WINS!</div>')
         }
 
         // turns winning values red
@@ -81,27 +79,31 @@ $(document).ready(function() {
   }
 
   // creates button to allow replay
-  function playButton () {
-    $('body').append('<button>Play Again?</button>')
-  }
+  function playButton () { $('body').append('<button>Play Again?</button>') }
 
   // switches boolean values of players
-  function switchTurn(){
+  function switchTurn() {
     player1 = !player1;
-    player2 = !player2;
-    ($('#currentPlayer').text() === 'X') ? $('#currentPlayer').text('O').removeClass('xcolor').addClass('ocolor') : $('#currentPlayer').text('X').removeClass('ocolor').addClass('xcolor');
+    ($('#currentPlayer').text() === 'X') ? $('#currentPlayer').text('O').removeClass('xColor').addClass('oColor') :
+    $('#currentPlayer').text('X').removeClass('oColor').addClass('xColor');
   }
 
   // resets board
   function resetBoard() {
     turns = 0;
     gameOver = false;
-    player1 = true;
-    player2 = false;
     $('#turnStatus').show();
-    $('#currentPlayer').text('X').removeClass('ocolor').addClass('xcolor');
     $('#msgDisplay').hide();
     $('button').remove();
     $('.board td').text("");
+
+    // switches which player starts first
+    if ($('#winner').text() === 'X') {
+      $('#currentPlayer').text('O').removeClass('xColor').addClass('oColor');
+      player1 = false;
+    } else if ($('#winner').text() === 'O') {
+      $('#currentPlayer').text('X').removeClass('oColor').addClass('xColor');
+      player1 = true;
+    }
   }
 });
