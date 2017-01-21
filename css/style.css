@@ -1,5 +1,13 @@
 body {
   text-align: center;
+  background-color: #00b3b3;
+  font-family: 'Fredoka One', cursive;
+}
+
+header {
+  font-family: 'Fredoka One', cursive;
+  font-size: 1.5em;
+  color: #006666;
 }
 
 table {
@@ -8,15 +16,64 @@ table {
 
 table.board {
   border-collapse: collapse;
-  font-size: 50px;
+  font-size: 4em;
+  font-weight: bold;
+}
+
+button {
+  font-size: 2em;
+  border: none;
+  border-radius: 5px;
+  font-family: 'Fredoka One', cursive;
+  background-color: #006666;
+  color: #ccffff;
+}
+
+button:hover {
+  color: #006666;
+  background-color: #00ffff;
+}
+
+.pScoreDisplay {
+  font-size: 1.25em;
+}
+
+.score tbody td {
+  color: #00cccc;
+  font-size: 1.5em;
+  color: #ccffff;
+}
+
+.score thead th {
+  color: #008080;
+}
+
+.xColor {
+  color: #ccffff;
+}
+
+.oColor {
+  color: #737373;
+}
+
+.red {
+  color: #ff5233;
+}
+
+.pScoreDisplay {
+  padding: 0 20px;
 }
 
 .board td {
   width: 100px;
   height: 100px;
   text-align: center;
-  border: 5px solid black;
+  border: 5px solid #008080;
   cursor: pointer;
+}
+
+.board td:hover {
+  background-color: rgba(128, 255, 255, 0.3);
 }
 
 .board tr td:first-child {
@@ -33,4 +90,53 @@ table.board {
 
 .board tr:last-child td {
   border-bottom: none;
+}
+
+.fadeIn{
+	animation-name: fadeIn;
+	-webkit-animation-name: fadeIn;
+
+	animation-duration: 0.75s;
+	-webkit-animation-duration: 0.75s;
+
+	animation-timing-function: ease-in-out;
+	-webkit-animation-timing-function: ease-in-out;
+
+	visibility: visible !important;
+}
+
+@keyframes fadeIn {
+	0% {
+		transform: scale(0);
+		opacity: 0.75;
+	}
+	60% {
+		transform: scale(1.1);
+	}
+	80% {
+		transform: scale(0.9);
+		opacity: 1;
+	}
+	100% {
+		transform: scale(1);
+		opacity: 1;
+	}
+}
+
+@-webkit-keyframes fadeIn {
+	0% {
+		-webkit-transform: scale(0);
+		opacity: 0.0;
+	}
+	60% {
+		-webkit-transform: scale(1.1);
+	}
+	80% {
+		-webkit-transform: scale(0.9);
+		opacity: 1;
+	}
+	100% {
+		-webkit-transform: scale(1);
+		opacity: 1;
+	}
 }
