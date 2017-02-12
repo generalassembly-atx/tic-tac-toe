@@ -30,7 +30,7 @@ $('td').on('click', function(){
 		$('span').text("1");
 		currentPlayer = true;
 	}
-	if (turns >= maxTurns) {
+	if (turns > maxTurns) {
 		alert("We have a cat's game!");
 		$('.board td').empty();
 		$('span').text("1");
