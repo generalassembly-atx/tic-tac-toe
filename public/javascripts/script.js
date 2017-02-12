@@ -18,7 +18,7 @@ $('td').on('click', function(){
 	if ($(this).text()) {
 		return;
 	}
-	if (turns++ >= maxTurns) {
+	if (turns++ > maxTurns) {
 		alert("We have a cat's game!");
 	};
 	if (currentPlayer === true){
@@ -211,3 +211,21 @@ function checkWinner(e){
 // check if a tie (cats game)
 // make square unclickable if already checked
 // add a reset on winner or tie
+
+
+// function fizzBuzz(){
+//
+//   for(var i=1; i<=100; i++){
+//     if (i%5 === 0 && i%3 === 0){
+//       console.log("fizzBuzz");
+//     } else if (i%5 === 0){
+//       console.log("buzz");
+//     } else if (i%3 === 0){
+//       console.log("fizz");
+//     } else {
+//       console.log(i);
+//     }
+//   }
+// }
+//
+// fizzBuzz();
