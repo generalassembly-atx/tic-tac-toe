@@ -18,7 +18,7 @@ $('td').on('click', function(){
 	if ($(this).text()) {
 		return;
 	}
-	if (turns++ > maxTurns) {
+	if (turns++ >= maxTurns) {
 		alert("We have a cat's game!");
 	};
 	if (currentPlayer === true){
@@ -29,8 +29,8 @@ $('td').on('click', function(){
 		$(this).text(player2);
 		$('span').text("1");
 		currentPlayer = true;
-	}
-	if (turns > maxTurns) {
+	} checkWinner();
+	if (turns >= maxTurns) {
 		alert("We have a cat's game!");
 		$('.board td').empty();
 		$('span').text("1");
